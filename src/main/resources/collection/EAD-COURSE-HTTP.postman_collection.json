@@ -257,6 +257,137 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Lessons",
+			"item": [
+				{
+					"name": "Get all Lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/modules/{{module_id}}/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"modules",
+								"{{module_id}}",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one lesson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/modules/{{module_id}}/lessons/{{lesson_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"modules",
+								"{{module_id}}",
+								"lessons",
+								"{{lesson_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update lesson",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Modulo nome 1\",\n    \"description\": \"Aprenda Spring Teste\",\n    \"videoUrl\": \"www.google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/modules/{{module_id}}/lessons/{{lesson_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"modules",
+								"{{module_id}}",
+								"lessons",
+								"{{lesson_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Lesson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Lesson nome 2\",\n    \"description\": \"Aprenda Spring Teste\",\n    \"videoUrl\": \"www.google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/modules/{{module_id}}/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"modules",
+								"{{module_id}}",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one lesson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/modules/{{module_id}}/lessons/{{lesson_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"modules",
+								"{{module_id}}",
+								"lessons",
+								"{{lesson_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
