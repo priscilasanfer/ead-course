@@ -37,7 +37,7 @@
 								},
 								{
 									"key": "name",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
@@ -53,6 +53,11 @@
 								{
 									"key": "size",
 									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "aebe95a0-0864-40fc-9ab7-2b9ad1fe1a1e",
 									"disabled": true
 								}
 							]
