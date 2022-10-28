@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "4eebc267-5fa3-4046-a5ca-3340cf120174",
+		"name": "EAD-COURSE-USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7560553"
+	},
+	"item": [
+		{
+			"name": "Get All Users by Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/courses/{{courseId}}/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"courses",
+						"{{courseId}}",
+						"users"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "courseId,asc",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
