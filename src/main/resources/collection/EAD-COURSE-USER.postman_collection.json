@@ -43,6 +43,54 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Post Subscription User In Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"{{userId}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/courses/{{courseId}}/users/subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"courses",
+						"{{courseId}}",
+						"users",
+						"subscription"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "courseId,asc",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
