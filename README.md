@@ -18,3 +18,7 @@ de forma a forçar o carregamento eager de entidades relacionadas e ainda evitan
 - Rodar o projeto: https://github.com/priscilasanfer/api-gateway
 - Rodar o projeto: https://github.com/priscilasanfer/ead-authuser
 - Rodar a aplicação
+
+#### Como abrir diagrama do projeto:
+- Acessar o site: https://app.diagrams.net/
+- Fazer o upload do arquivo: src/main/resources/files/EAD-Arquitetura-Microservices.drawio
