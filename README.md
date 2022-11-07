@@ -10,3 +10,11 @@ de forma a forçar o carregamento eager de entidades relacionadas e ainda evitan
 - *orphanRemoval = true*: cada relacionamento precisa estar vinculado a uma entidade se tiver algum relaciomento que não tenha um vinculo com a entidade ele também vai ser deletado
 - *@OnDelete()*: Um pouco melhor que o cascade = CascadeType.ALL com orphanRemoval = true. Usando a action OnDeleteAction.CASCADE estamos delegando para o banco de dados
 - *@Transactional*: Faz tudo dentro de uma transação no banco e se algo der errado ele volta para o estado anterior sem afetar os dados no banco 
+
+
+#### Executar o projeto
+
+- Rodar o projeto: https://github.com/priscilasanfer/service-registry
+- Rodar o projeto: https://github.com/priscilasanfer/api-gateway
+- Rodar o projeto: https://github.com/priscilasanfer/ead-authuser
+- Rodar a aplicação
