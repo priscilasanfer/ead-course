@@ -50,7 +50,7 @@ public class AuthUserClient {
             log.debug("Response Number of elements: {}", searchResult.size());
 
         } catch (HttpStatusCodeException e) {
-            log.error("Error Request /users {}", e);
+            log.error("Error Request /courses {}", e);
         }
 
         log.info("End of Request /users courseId: {}", courseId);

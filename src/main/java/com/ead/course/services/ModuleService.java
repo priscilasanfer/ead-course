@@ -13,7 +13,7 @@ public interface ModuleService {
 
     void delete(ModuleModel moduleModel);
 
-    ModuleModel save(ModuleModel modelModule);
+    ModuleModel save(ModuleModel moduleModel);
 
     Optional<ModuleModel> findById(UUID moduleId);
 

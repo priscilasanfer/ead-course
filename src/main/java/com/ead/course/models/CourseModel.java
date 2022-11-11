@@ -43,9 +43,11 @@ public class CourseModel implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
     private LocalDateTime lasUpdateDate;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private CourseStatus courseStatus;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private CourseLevel courseLevel;
 

@@ -17,14 +17,14 @@ substitui: @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'
 tem um controle maior do que fazer essa configuração no arquivo de properties
  */
 
-    public static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-    public static final LocalDateTimeSerializer LOCAL_DATE_TIME_SERIALIZER = new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(DATE_FORMAT));
+    public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+    public static LocalDateTimeSerializer LOCAL_DATETIME_SERIALIZER = new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(DATETIME_FORMAT));
 
     @Bean
     @Primary
     public ObjectMapper objectMapper(){
         JavaTimeModule module = new JavaTimeModule();
-        module.addSerializer(LOCAL_DATE_TIME_SERIALIZER);
+        module.addSerializer(LOCAL_DATETIME_SERIALIZER);
         return new ObjectMapper().registerModule(module);
     }
 }

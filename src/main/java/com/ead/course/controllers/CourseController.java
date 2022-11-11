@@ -60,14 +60,16 @@ public class CourseController {
 
         courseService.save(courseModel);
 
-        log.debug("POST saveCourse courseModel saved {}", courseModel.toString());
-        log.info("Course saved successfully courseId {}", courseModel.getCourseId());
+        log.debug("POST saveCourse courseId saved {} ", courseModel.getCourseId());
+        log.info("Course saved successfully courseId {} ", courseModel.getCourseId());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(courseModel);
     }
 
     @DeleteMapping("/{courseId}")
     public ResponseEntity<Object> deleteCourse(@PathVariable(value = "courseId") UUID courseId) {
+        log.debug("DELETE deleteCourse courseId received {} ", courseId);
+        
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
         if (courseModelOptional.isEmpty()) {
@@ -75,13 +77,17 @@ public class CourseController {
         }
 
         courseService.delete(courseModelOptional.get());
+        log.debug("DELETE deleteCourse courseId deleted {} ", courseId);
+        log.info("Course deleted successfully courseId {} ", courseId);
 
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Course deleted sucessfully.");
+        return ResponseEntity.status(HttpStatus.OK).body("Course deleted successfully.");
     }
 
     @PutMapping("/{courseId}")
     public ResponseEntity<Object> updateCourse(@PathVariable(value = "courseId") UUID courseId,
                                                @RequestBody @Valid CourseDto courseDto) {
+        log.debug("PUT updateCourse courseDto received {} ", courseDto.toString());
+
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
         if (courseModelOptional.isEmpty()) {
@@ -94,9 +100,11 @@ public class CourseController {
         courseModel.setImageUrl(courseDto.getImageUrl());
         courseModel.setCourseStatus(courseDto.getCourseStatus());
         courseModel.setCourseLevel(courseDto.getCourseLevel());
-        courseModel.setUserInstructor(courseDto.getUserInstructor());
         courseModel.setLasUpdateDate(LocalDateTime.now(ZoneId.of("UTC")));
-        return ResponseEntity.status(HttpStatus.OK).body(courseService.save(courseModel));
+        courseService.save(courseModel);
+        log.debug("PUT updateCourse courseId saved {} ", courseModel.getCourseId());
+        log.info("Course updated successfully courseId {} ", courseModel.getCourseId());
+        return ResponseEntity.status(HttpStatus.OK).body(courseModel);
     }
 
     @GetMapping
@@ -114,7 +122,7 @@ public class CourseController {
     }
 
     @GetMapping("/{courseId}")
-    public ResponseEntity<Object> getOneCourses(@PathVariable(value = "courseId") UUID courseId) {
+    public ResponseEntity<Object> getOneCourse(@PathVariable(value = "courseId") UUID courseId) {
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
 
         if (courseModelOptional.isEmpty()) {

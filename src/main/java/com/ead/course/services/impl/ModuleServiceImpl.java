@@ -36,8 +36,8 @@ public class ModuleServiceImpl implements ModuleService {
     }
 
     @Override
-    public ModuleModel save(ModuleModel modelModule) {
-        return moduleRepository.save(modelModule);
+    public ModuleModel save(ModuleModel moduleModel) {
+        return moduleRepository.save(moduleModel);
     }
 
     @Override

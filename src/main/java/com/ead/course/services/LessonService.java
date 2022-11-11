@@ -16,7 +16,7 @@ public interface LessonService {
 
     void delete(LessonModel lessonModel);
 
-    List<LessonModel> findAllByLesson(UUID moduleId);
+    List<LessonModel> findAllByModule(UUID moduleId);
 
-    Page<LessonModel> findAllByLesson(Specification<LessonModel> spec, Pageable page);
+    Page<LessonModel> findAllByModule(Specification<LessonModel> spec, Pageable pageable);
 }
